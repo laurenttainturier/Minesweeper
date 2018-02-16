@@ -180,7 +180,8 @@ public class TilesArea extends JPanel implements MouseListener
                 if (mouseEvent.getButton() == 1)
                 {
                     Minesweeper.showCell(line, column);
-                } else if (mouseEvent.getButton() == 3)
+                }
+                else if (mouseEvent.getButton() == 3)
                 {
                     Minesweeper.setFlag(line, column);
                 }

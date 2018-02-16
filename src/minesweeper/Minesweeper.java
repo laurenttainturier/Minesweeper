@@ -37,7 +37,7 @@ public class Minesweeper
         GUI graphicalInterface = new GUI();
         try
         {
-            GiveTime.main(graphicalInterface);
+            GiveTime.main();
         } catch (InterruptedException e)
         {
             e.printStackTrace();
@@ -157,7 +157,7 @@ public class Minesweeper
 
     public static void setFlag(int line, int column)
     {
-        if (bombsNotFound > 0)
+        if (bombsNotFound > 0 || table.get(line).get(column).getFlag())
         {
             table.get(line).get(column).setFlag();
             if (table.get(line).get(column).getFlag())
@@ -216,7 +216,7 @@ class GiveTime
 {
     public static boolean passedBy;
 
-    public static void main(GUI aGUI) throws InterruptedException
+    public static void main() throws InterruptedException
     {
         passedBy = false;
         Minesweeper.time = 0;
